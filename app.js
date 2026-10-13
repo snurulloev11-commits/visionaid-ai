@@ -26,7 +26,7 @@ async function loadModel(){
   try{
     modelStatusText.textContent="Loading AI model…";
     modelStatus.classList.remove("ready","error");
-    model=await mobilenet.load({version:2,alpha:1.0});
+    model=await mobilenet.load({version:2,alpha:1.0,modelUrl:"https://storage.googleapis.com/tfjs-models/savedmodel/mobilenet_v2_1.0_224/model.json",inputRange:[0,1]});
     modelStatusText.textContent="AI model ready";
     modelStatus.classList.add("ready");
   }catch(error){
