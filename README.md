@@ -6,7 +6,7 @@ It allows a user to upload a photo or capture an image with a camera, identify e
 
 ## Live demo
 
-https://opaque-handmade-modem--snurulloev77777.replit.app
+https://cdn.jsdelivr.net/gh/snurulloev11-commits/visionaid-ai@cc3b012984947d09068fbdd6570024a6a9822f83/index.html
 
 ## Features
 
@@ -41,7 +41,7 @@ https://opaque-handmade-modem--snurulloev77777.replit.app
 
 An internet connection is required to load TensorFlow.js and MobileNet from the CDN.
 
-For camera support, serve the folder on localhost, for example with a simple local web server, then open the local URL in a browser.
+The public demo is served directly from the GitHub repository through jsDelivr, so no Replit credits or server deployment are required.
 
 ## Privacy
 
