@@ -6,13 +6,13 @@ It allows a user to upload a photo or capture an image with a camera, identify e
 
 ## Live demo
 
-https://cdn.jsdelivr.net/gh/snurulloev11-commits/visionaid-ai@cc3b012984947d09068fbdd6570024a6a9822f83/index.html
+https://silly-typhoon-z461n.ship.place/
 
 ## Features
 
 - Image upload
 - Camera capture
-- MobileNet object classification
+- MobileViT object classification
 - Confidence score
 - Alternative predictions
 - Text-to-speech result
@@ -24,22 +24,22 @@ https://cdn.jsdelivr.net/gh/snurulloev11-commits/visionaid-ai@cc3b012984947d0906
 - HTML
 - CSS
 - JavaScript
-- TensorFlow.js
-- MobileNet
+- Transformers.js
+- MobileViT
 - Web Speech API
 - MediaDevices / getUserMedia
 
 ## How it works
 
-1. TensorFlow.js loads a pre-trained MobileNet model.
+1. Transformers.js loads a pre-trained MobileViT model.
 2. The user supplies an image by upload or camera capture.
-3. MobileNet returns the top three ImageNet predictions.
+3. MobileViT returns the top three ImageNet predictions.
 4. VisionAid AI displays the highest-confidence result.
 5. The browser can read the result aloud.
 
 ## Run locally
 
-An internet connection is required to load TensorFlow.js and MobileNet from the CDN.
+An internet connection is required to load Transformers.js and MobileViT from the CDN.
 
 The public demo is served directly from the GitHub repository through jsDelivr, so no Replit credits or server deployment are required.
 
@@ -49,7 +49,7 @@ Images are processed in the browser. This prototype does not upload selected ima
 
 ## Limitations
 
-- MobileNet is a general ImageNet classifier and can make mistakes.
+- MobileViT is a general ImageNet classifier and can make mistakes.
 - Performance depends on lighting, image quality, and whether the object exists in its training classes.
 - This prototype is not intended for navigation or safety-critical decisions.
 
