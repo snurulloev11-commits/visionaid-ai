@@ -1,59 +1,29 @@
-# VisionAid AI
+# EcoScan — AI Environmental Assistant
 
-VisionAid AI is a browser-based accessibility prototype built for **EurekaDev 2026**.
+**Live website:** https://ecoscan-dushanbe.floot.app
 
-It allows a user to upload a photo or capture an image with a camera, identify everyday objects using a pre-trained computer-vision model, view a confidence score and alternative predictions, and hear the top result spoken aloud.
+EcoScan is an environmental photo-analysis web app. It uses AI to analyze user-supplied images of pollution, explain possible environmental risks, recommend safe responses, and answer follow-up questions. The example case studies are illustrative pilot scenarios, not verified field deployments.
 
-## Live demo
+## Source files
 
-https://silly-typhoon-z461n.ship.place/
+This branch contains the **actual application-specific source-code snapshot exported from the owner's Floot workspace on 20 October 2026**: the responsive React/TypeScript interface, CSS styles, environmental-analysis endpoint, AI follow-up endpoint, supporting UI components, and typed API schemas.
 
-## Features
+The running app is hosted on **Floot**. These files use Floot's project framework and the platform-provided `@floot/ai` and typed endpoint helpers; this export is **not** a standalone npm/Vite project and cannot be redeployed unchanged outside Floot. UI toolkit imports are available in the original Floot project.
 
-- Image upload
-- Camera capture
-- MobileViT object classification
-- Confidence score
-- Alternative predictions
-- Text-to-speech result
-- Client-side image processing
-- Responsive accessibility-focused interface
+## Project structure
 
-## Built with
+- `pages/_index.tsx` — EcoScan interface and analysis workflow.
+- `pages/_index.module.css` — responsive application styles.
+- `endpoints/analyze_POST.ts` — structured environmental image analysis using Floot AI.
+- `endpoints/ask_POST.ts` — follow-up question answering.
+- `endpoints/*schema.ts` — endpoint request/response types.
+- `components/*` — application UI elements used by the page.
+- `base.css` — shared design tokens and global CSS.
 
-- HTML
-- CSS
-- JavaScript
-- Transformers.js
-- MobileViT
-- Web Speech API
-- MediaDevices / getUserMedia
+## Authorship and competition eligibility
 
-## How it works
+The product was developed with AI-assisted building tools. Publishing these source files does **not** certify that its core structure and logic were personally written without AI. Any competition requiring fully participant-authored core code and structure must be evaluated against its rules before submission. The code is provided transparently as an export of the current EcoScan project, **not** as proof of independent manual authorship.
 
-1. Transformers.js loads a pre-trained MobileViT model.
-2. The user supplies an image by upload or camera capture.
-3. MobileViT returns the top three ImageNet predictions.
-4. VisionAid AI displays the highest-confidence result.
-5. The browser can read the result aloud.
+## Security
 
-## Run locally
-
-An internet connection is required to load Transformers.js and MobileViT from the CDN.
-
-The public demo is served directly from the GitHub repository through jsDelivr, so no Replit credits or server deployment are required.
-
-## Privacy
-
-Images are processed in the browser. This prototype does not upload selected images to a custom server.
-
-## Limitations
-
-- MobileViT is a general ImageNet classifier and can make mistakes.
-- Performance depends on lighting, image quality, and whether the object exists in its training classes.
-- This prototype is not intended for navigation or safety-critical decisions.
-
-## EurekaDev 2026
-
-**Track:** Coding  
-**Category:** Computer Science + AI / Social Good
+Only project code is included here. No private deployment credentials or API keys are included; AI services are configured inside Floot's managed environment.
